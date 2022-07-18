@@ -5,7 +5,7 @@ header {
   padding: 0 20px;
   margin: 0 auto;
   &.active {
-    background-color: #fff;
+    background-color: $color-white-0;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -45,10 +45,6 @@ header nav {
   .ondwayLogo {
     position: relative;
   }
-
-  @media (max-width: 768px) {
-    margin-bottom: 73px;
-  }
 }
 
 nav ul {
@@ -56,32 +52,19 @@ nav ul {
   gap: 48px;
 
   a {
-    color: #63605f;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
+    @include typeface-medium-16;
+    color: $color-grey-3;
 
     &:hover,
     &:active {
-      color: #fe6f46;
+      color: $color-orange;
     }
-  }
-
-  @media (max-width: 992px) {
-    position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
-    transform: translateX(-120%);
   }
 }
 
 .toggle {
   position: absolute;
   display: none;
-  @media (max-width: 992px) {
-    display: block;
-    right: 20px;
-  }
 }
 
 .close {
@@ -93,32 +76,19 @@ nav ul {
 .banner {
   text-align: center;
   padding-bottom: 141px;
-  background: $gradiant;
+  background-image: url(/assets/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   h1 {
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 125%;
+    @include typeface-bold-56;
     margin-bottom: 16px;
-    @media (max-width: 768px) {
-      font-size: 32px;
-      line-height: 140%;
-    }
   }
 
   p {
-    font-size: 20px;
+    @include typeface-regular-20;
     max-width: 625px;
     margin: 0 auto;
-    @media (max-width: 768px) {
-      max-width: 320px;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 160%;
-    }
-  }
-  @media (max-width: 768px) {
-    padding-bottom: 74px;
   }
 }
 
@@ -132,28 +102,17 @@ nav ul {
     content: url(/assets/images/underline.svg);
     position: absolute;
     transform: translate(-113%, 25%);
-    @media (max-width: 768px) {
-      content: url(/assets/images/underlineMobile.svg);
-    }
   }
+
   p {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
-    color: #717484;
+    @include typeface-regular-20;
+    color: $color-grey-2;
     margin-top: 48px;
-    @media (max-width: 768px) {
-      font-size: 14px;
-      line-height: 160%;
-    }
-  }
-  @media (max-width: 768px) {
-    padding: 64px 24px;
   }
 }
 
 .reason {
-  background-color: #fbf5ef;
+  background-color: $color-white-1;
   padding: 100px 0;
 
   h3 {
@@ -163,12 +122,6 @@ nav ul {
         content: url(/assets/images/underline.svg);
         position: absolute;
         transform: translate(-100%, 25%);
-        @media (max-width: 768px) {
-          content: url(/assets/images/underlineMobile.svg);
-        }
-      }
-      @media (max-width: 768px) {
-        display: block;
       }
     }
   }
@@ -178,10 +131,6 @@ nav ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 103.5px;
-
-    @media (max-width: 768px) {
-      gap: 40px;
-    }
   }
 
   .reasonCardDetail {
@@ -192,34 +141,11 @@ nav ul {
       margin-bottom: 32px;
     }
     h4 {
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 140%;
-      color: #3f3d3d;
+      @include typeface-bold-32;
+      color: $color-black-2;
     }
     p {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 160%;
-    }
-    @media (max-width: 768px) {
-      img {
-        margin-bottom: 20px;
-      }
-      h4 {
-        font-size: 20px;
-        line-height: 150%;
-      }
-      p {
-        font-size: 14px;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 64px 0;
-    h3 {
-      margin-bottom: 48px;
+      @include typeface-regular-16;
     }
   }
 }
@@ -233,9 +159,6 @@ nav ul {
       content: url(/assets/images/underline.svg);
       position: absolute;
       transform: translate(-105%, 30%);
-      @media (max-width: 768px) {
-        content: url(/assets/images/underlineMobile.svg);
-      }
     }
   }
 
@@ -246,19 +169,12 @@ nav ul {
     flex-wrap: wrap;
 
     h4 {
-      color: #312f2e;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 125%;
+      color: $color-black-1;
+      @include typeface-medium-20;
     }
 
     p {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 160%;
-    }
-    @media (max-width: 768px) {
-      gap: 30px;
+      @include typeface-regular-16;
     }
   }
 
@@ -267,33 +183,19 @@ nav ul {
     align-items: center;
     justify-content: space-between;
     margin: 24px 0 2px 0;
-    @media (max-width: 768px) {
-      margin-top: 16px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 64px 20px;
-
-    h3 {
-      margin-bottom: 48px;
-    }
   }
 
   .displayPic {
-    max-width: 280px;
+    max-width: 310px;
   }
 }
 
 .partners {
   padding: 100px 20px;
-  background-color: #fafafb;
+  background-color: $color-white-2;
 
   h5 {
     margin-bottom: 32px;
-    @media (max-width: 768px) {
-      margin-bottom: 40px;
-    }
   }
 
   .partnerSlider {
@@ -302,15 +204,9 @@ nav ul {
     row-gap: 32px;
     justify-content: center;
     flex-wrap: wrap;
-
-    @media (max-width: 768px) {
-    }
   }
   .sliderOne {
     margin-bottom: 48px;
-  }
-  @media (max-width: 768px) {
-    padding: 64px 20px;
   }
 }
 
@@ -321,7 +217,7 @@ nav ul {
   flex-wrap: wrap-reverse;
   justify-content: center;
   align-items: center;
-  background-color: #fdf1ec;
+  background-color: $color-white-3;
   padding: 75px 20px;
 
   h3 {
@@ -332,49 +228,42 @@ nav ul {
       content: url(/assets/images/careerUnderline.svg);
       position: absolute;
       transform: translate(-99%, 25%);
-      @media (max-width: 768px) {
-        content: url(/assets/images/careerUnderlineMobile.svg);
-      }
-    }
-    @media (max-width: 768px) {
-      text-align: center;
     }
   }
+
   p {
     max-width: 414px;
     margin-bottom: 40px;
     span {
-      color: #1b1d33;
+      color: $color-blue-0;
       font-weight: 700;
       text-decoration: underline;
     }
   }
-
-  @media (max-width: 768px) {
-    flex-direction: column-reverse;
-    justify-content: center;
-    text-align: center;
-  }
 }
 
 footer {
-  background-color: #0d0d0d;
+  background-color: $color-black-0;
 
   p {
-    color: #bdbec4;
+    color: $color-blue-1;
   }
 
   a {
-    color: #bdbec4;
+    color: $color-blue-1;
 
     &:hover,
     &:active {
-      color: #fff;
+      color: $color-white-0;
     }
   }
 
   h4 {
-    color: #fff;
+    color: $color-white-0;
+  }
+
+  hr {
+    border: 1px solid $color-grey-4;
   }
 
   .footerSubscribe {
@@ -388,32 +277,18 @@ footer {
     gap: 32px;
 
     input {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 150%;
-      color: #9c9eaa;
+      @include typeface-regular-20;
+      color: $color-blue-3;
       width: 400px;
       padding: 13px 0 13px 24px;
       border-radius: 10px 0px 0px 10px;
       border: none;
-      @media (max-width: 768px) {
-        width: 211px;
-        padding: 10px 0 10px 24px;
-        font-size: 14px;
-        line-height: 160%;
-      }
-      @media (max-width: 360px) {
-        width: 191px;
-      }
     }
 
     button {
-      background-color: #fe6f46;
-      color: #fff;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 150%;
+      background-color: $color-orange;
+      color: $color-white-0;
+      @include typeface-bold-20;
       padding: 13px 32px;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
       border-radius: 0px 10px 10px 0px;
@@ -422,16 +297,8 @@ footer {
 
       &:hover,
       &:active {
-        color: #fe6f46;
-        background-color: #fff;
-      }
-      @media (max-width: 768px) {
-        font-size: 14px;
-        line-height: 160%;
-        padding: 10px 20px;
-      }
-      @media (max-width: 360px) {
-        padding: 10px 10px;
+        color: $color-orange;
+        background-color: $color-white-0;
       }
     }
 
@@ -439,35 +306,12 @@ footer {
       display: flex;
     }
     h3 {
-      color: #fff;
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 135%;
-
-      @media (max-width: 768px) {
-        font-size: 24px;
-        line-height: 33.4px;
-      }
+      color: $color-white-0;
+      @include typeface-medium-40;
     }
     p {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 150%;
-      @media (max-width: 768px) {
-        font-size: 14px;
-        line-height: 160%;
-      }
+      @include typeface-regular-20;
     }
-
-    .subscribeHeading {
-      @media (max-width: 768px) {
-        max-width: 274px;
-      }
-    }
-  }
-
-  hr {
-    border: 1px solid #5c5c5c;
   }
 }
 
@@ -477,9 +321,7 @@ footer {
   row-gap: 48px;
 
   p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 160%;
+    @include typeface-regular-14;
   }
 
   h4 {
@@ -499,18 +341,12 @@ footer {
       display: flex;
       gap: 16px;
     }
-    @media (max-width: 768px) {
-      flex-basis: 100%;
-    }
   }
 
   .company {
     flex-basis: 20%;
     li {
       margin-bottom: 10px;
-    }
-    @media (max-width: 768px) {
-      flex-basis: 50%;
     }
   }
 
@@ -519,9 +355,6 @@ footer {
 
     li {
       margin-bottom: 10px;
-    }
-    @media (max-width: 768px) {
-      flex-basis: 50%;
     }
   }
 
@@ -536,21 +369,13 @@ footer {
       align-items: center;
       margin-bottom: 8px;
     }
-    @media (max-width: 768px) {
-      flex-basis: 100%;
-    }
-  }
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
   }
 }
 
 .policies {
   display: flex;
   justify-content: space-between;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 160%;
+  @include typeface-regular-12;
   padding-bottom: 32px;
 
   ul {
@@ -558,26 +383,203 @@ footer {
     gap: 12px;
 
     span {
-      color: #8f8f8f;
-
-      @media (max-width: 768px) {
-        display: none;
-      }
+      color: $color-grey-1;
     }
-    @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 6px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    row-gap: 12px;
   }
 }
 
-// @media (max-width: 768px) {
-//   header nav{
-//     margin-bottom: 75px;
-//   }
-// }
+@media (max-width: 992px) {
+  nav ul {
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(-120%);
+  }
+
+  .toggle {
+    display: block;
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    margin-bottom: 75px;
+  }
+
+  .banner {
+    padding-bottom: 74px;
+    background-image: url(/assets/images/backgroundResponsive.png);
+  }
+
+  .banner h1 {
+    @include typeface-bold-32;
+  }
+
+  .banner p {
+    max-width: 320px;
+    @include typeface-regular-14;
+  }
+
+  .mission {
+    padding: 64px 24px;
+  }
+
+  .mission h3::after {
+    content: url(/assets/images/underlineMobile.svg);
+  }
+
+  .mission p {
+    @include typeface-regular-14;
+  }
+
+  .reason {
+    padding: 64px 0;
+
+    h3 {
+      margin-bottom: 48px;
+
+      span {
+        display: block;
+
+        &::after {
+          content: url(/assets/images/underlineMobile.svg);
+        }
+      }
+    }
+    .reasonCard {
+      gap: 40px;
+    }
+
+    .reasonCardDetail {
+      img {
+        margin-bottom: 20px;
+      }
+      h4 {
+        @include typeface-bold-20;
+      }
+      p {
+        @include typeface-regular-14;
+      }
+    }
+  }
+
+  .team {
+    padding: 64px 20px;
+
+    h3 {
+      margin-bottom: 48px;
+    }
+
+    h3::after {
+      content: url(/assets/images/underlineMobile.svg);
+    }
+
+    .teamDetail {
+      gap: 30px;
+    }
+
+    .teamName {
+      margin-top: 16px;
+    }
+
+    .displayPic {
+      max-width: 280px;
+    }
+  }
+
+  .partners {
+    padding: 64px 20px;
+
+    h5 {
+      margin-bottom: 40px;
+    }
+  }
+
+  .career {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+
+    h3 {
+      text-align: center;
+
+      span::after {
+        content: url(/assets/images/careerUnderlineMobile.svg);
+      }
+    }
+  }
+
+  footer {
+    .footerSubscribe {
+      input {
+        width: 211px;
+        padding: 10px 0 10px 24px;
+        @include typeface-regular-14;
+      }
+
+      button {
+        @include typeface-bold-14;
+        padding: 10px 20px;
+      }
+
+      h3 {
+        @include typeface-bold-24;
+      }
+
+      p {
+        @include typeface-regular-14;
+      }
+
+      .subscribeHeading {
+        max-width: 274px;
+      }
+    }
+  }
+
+  .footerDetail {
+    flex-wrap: wrap;
+
+    .socialMedia {
+      flex-basis: 100%;
+    }
+    .company {
+      flex-basis: 50%;
+    }
+
+    .products {
+      flex-basis: 50%;
+    }
+
+    .contactUs {
+      flex-basis: 100%;
+    }
+  }
+
+  .policies {
+    flex-direction: column;
+    row-gap: 12px;
+    ul {
+      flex-direction: column;
+      gap: 6px;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  footer {
+    .footerSubscribe {
+      input {
+        width: 191px;
+      }
+
+      button {
+        padding: 10px 10px;
+      }
+    }
+  }
+}

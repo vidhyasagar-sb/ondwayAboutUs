@@ -1,6 +1,21 @@
 $gradiant: linear-gradient(180deg, #f4e7d7 0%, rgba(244, 231, 215, 0) 152.08%);
 
 // colors
+$color-white-0: #ffffff;
+$color-white-1: #fbf5ef;
+$color-white-2: #fafafb;
+$color-white-3: #fdf1ec;
+$color-grey-1: #8f8f8f;
+$color-grey-2: #717484;
+$color-grey-3: #63605f;
+$color-grey-4: #5c5c5c;
+$color-orange: #fe6f46;
+$color-black-0: #0d0d0d;
+$color-black-1: #312f2e;
+$color-black-2: #3f3d3d;
+$color-blue-0: #1b1d33;
+$color-blue-1: #bdbec4;
+$color-blue-3: #9c9eaa;
 
 // fonts
 $fontsize-56: 56px;
@@ -18,3 +33,84 @@ $lineheight-150: 150%;
 $lineheight-140: 140%;
 $lineheight-135: 135%;
 $lineheight-125: 125%;
+
+@mixin typeface-bold-56 {
+  font-weight: 700;
+  font-size: $fontsize-56;
+  line-height: $lineheight-125;
+}
+@mixin typeface-bold-40 {
+  font-weight: 700;
+  font-size: $fontsize-40;
+  line-height: $lineheight-135;
+}
+@mixin typeface-bold-32 {
+  font-weight: 700;
+  font-size: $fontsize-32;
+  line-height: $lineheight-140;
+}
+@mixin typeface-bold-24 {
+  font-weight: 700;
+  font-size: $fontsize-24;
+  line-height: $lineheight-140;
+}
+@mixin typeface-bold-20 {
+  font-weight: 700;
+  font-size: $fontsize-20;
+  line-height: $lineheight-150;
+}
+@mixin typeface-bold-16 {
+  font-weight: 700;
+  font-size: $fontsize-16;
+  line-height: $lineheight-150;
+}
+@mixin typeface-bold-14 {
+  font-weight: 700;
+  font-size: $fontsize-14;
+  line-height: $lineheight-150;
+}
+@mixin typeface-medium-40 {
+  font-weight: 500;
+  font-size: $fontsize-40;
+  line-height: $lineheight-135;
+}
+@mixin typeface-medium-24 {
+  font-weight: 500;
+  font-size: $fontsize-24;
+  line-height: $lineheight-140;
+}
+@mixin typeface-medium-20 {
+  font-weight: 500;
+  font-size: $fontsize-20;
+  line-height: $lineheight-125;
+}
+@mixin typeface-medium-16 {
+  font-weight: 500;
+  font-size: $fontsize-16;
+  line-height: $lineheight-150;
+}
+@mixin typeface-medium-12 {
+  font-weight: 500;
+  font-size: $fontsize-12;
+  line-height: $lineheight-160;
+}
+@mixin typeface-regular-20 {
+  font-weight: 400;
+  font-size: $fontsize-20;
+  line-height: $lineheight-150;
+}
+@mixin typeface-regular-16 {
+  font-weight: 400;
+  font-size: $fontsize-16;
+  line-height: $lineheight-160;
+}
+@mixin typeface-regular-14 {
+  font-weight: 400;
+  font-size: $fontsize-14;
+  line-height: $lineheight-160;
+}
+@mixin typeface-regular-12 {
+  font-weight: 400;
+  font-size: $fontsize-12;
+  line-height: $lineheight-160;
+}
